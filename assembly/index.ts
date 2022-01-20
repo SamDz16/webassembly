@@ -1,15 +1,18 @@
 // import { fetch } from "as-fetch";
 
-// export async function getData(): string {
-//     const response = await fetch("https://jsonplaceholder.typicode.com/users?_limit=3", {
+// export function getData(): string {
+//   fetch("https://jsonplaceholder.typicode.com/users?_limit=3", {
 //     method: "GET",
 //     mode: "no-cors",
-//     headers: [],
-//     body: null
+//     headers: [["content-type", "application/json"]],
 //   })
-//   const data = await response.json()
-//   return data
+//   .then((response) => response.json())
+//   .then(data => {
+//     console.log(data);
+//     return data
+//   })
 // }
+
 
 export function getNum(): i32{
   return 3
