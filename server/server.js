@@ -1,13 +1,13 @@
 const express = require("express")
-const cors = require("cors")
+// const cors = require("cors")
 
 const app = express();
 
-app.use(
-    cors({
-        origin: "https://dbpedia.org"
-    })
-)
+// app.use(
+//     cors({
+//         origin: "https://dbpedia.org"
+//     })
+// )
 
 app.use(express.static("public", {
     setHeaders: (res, path) => {
