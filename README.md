@@ -1,6 +1,6 @@
 # AssemblyScript in the Web
 
-In the rooot directory and in the `./server`, run:  
+In the root directory and in the `./server`, run:  
 `npm install`
 
 In the `./server` directory, run
