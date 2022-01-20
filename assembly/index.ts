@@ -1,24 +1,11 @@
-// import { fetch } from "as-fetch";
+import { fetch } from "as-fetch";
 
-// export function getData(): string {
-//   fetch("https://jsonplaceholder.typicode.com/users?_limit=3", {
-//     method: "GET",
-//     mode: "no-cors",
-//     headers: [["content-type", "application/json"]],
-//   })
-//   .then((response) => response.json())
-//   .then(data => {
-//     console.log(data);
-//     return data
-//   })
-// }
-
-
-export function getNum(): i32{
+export function getNum(): i32 {
+  // consolelog("IT'S LOGGING SOMETHOING TO THE CONSOLE")
   return 3
 }
 
-export function getGivenNum(num: i32): i32{
+export function getGivenNum(num: i32): i32 {
   return num
 }
 
@@ -28,4 +15,22 @@ export function getStr(): string {
 
 export function makeStr(str: string): string {
   return str
+}
+
+declare function log(message: string): void;
+// Import the JS log function. (console.log)
+
+export function consolelog(str: string): void {
+    log(str);
+    // Log 'Hello World!' to the console!
+}
+
+export function getData(endpoint: string, callback: Function): void {
+  fetch(endpoint, {
+    method: "GET",
+    mode: "no-cors",
+    headers: [],
+    body: null
+  })
+  .then(response => callback(response.text()))
 }
